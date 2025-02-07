@@ -24,16 +24,9 @@ def choose(_point, _input):
 
 def parse_string(string: str):
     """输出字符串进行处理"""
-
-    # 删除“@”字符
-    for v in range(string.count("@")):
-        for i in range(len(string)):
-            if string[i] == "@":
-                string = string[:i - 1] + string[i + 1:]
-                break
-
     # 处理转义字符
-    string = string.replace("$n", "\n").replace("$s", " ").replace("$a", "@")
+    string = (string.replace("$n", "\n").replace("$s", " ")
+                    .replace("$p", "#")).replace("$lb", "{").replace("$rb", "}")
 
     # 删除结尾冗余换行符和空格
     while string[-1] in {"\n", " "}:
@@ -58,7 +51,7 @@ def parse_script(string: str):
     for v in range(string.count(" ")):
         for i in range(len(string)):
             try:
-                if (string[i] == "\n") and string[i - 1] != "@":
+                if string[i] == "\n":
                     after_newline = True    # 位于换行符之后
 
                 elif string[i] != " ":
@@ -80,10 +73,10 @@ def parse_script(string: str):
         # 判断是否位于嵌套节点内
         for j in range(len(s)):
             try:
-                if s[j] == "{" and s[j - 1] != "@":
+                if s[j] == "{" and s[j - 1]:
                     num += 1  # 进入大括号嵌套，嵌套层数加一
 
-                elif s[j] == "}" and s[j - 1] != "@":
+                elif s[j] == "}" and s[j - 1]:
                     num -= 1  # 结束大括号嵌套，嵌套层数减一
 
             except IndexError:
