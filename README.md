@@ -38,17 +38,12 @@ $p->井号
 $lb->左大括号
 $rb->右大括号`
 
-以下为一个script.as脚本文件示例：
-`#script.as`
-`新游戏&`
-`{这是文本A`
-`#选项一`
-`    {这是文本B`
-`    #选项二`
-`    }`
-`#选项三`
-`}`
-游戏运行后，效果如下：
+你还可以在脚本中添加注释，以提高代码的可读性和可维护性。
+注释以`/*`开始，以`*/`结束。
+以下是一个示例注释：
+`/*这是一段注释*/`
+
+示例脚本文件运行后，效果如下：
 ![d2ViXzMwMDFfNzU4MTg5OV8wXzE3Mzg3Nzg4NTYyNTBfNDNlNjBjYzg](https://github.com/user-attachments/assets/a84f1a88-648a-453a-8b80-2fad4ac434df)
 点击“选项一”后，会显示：
 ![d2ViXzMwMDFfNzU4MTg5OV8wXzE3Mzg3Nzg4OTMwMzJfNjEzOTA2YjU](https://github.com/user-attachments/assets/c1cc9519-00e8-4e44-acb0-48ae9c8d4fe5)
