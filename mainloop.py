@@ -29,10 +29,6 @@ class GUI:
 
         self.check_updates()
 
-    def window_title(self, title):
-        """设置窗口标题"""
-        self.root.title(title)
-
     def check_updates(self):
         """ 每100ms检查一次更新队列 """
         while not self.update_queue.empty():
@@ -80,8 +76,8 @@ class GUI:
                 choices_list[i] = script_parse.parse_string(choices[i])  # 处理选项文本
 
         self.update_interface(script_parse.parse_string(text), choices_list)  # 处理节点文本并输出节点文本与选项文本
-        self.text = text    # 存储当前文本
-        self.choice = choices   # 存储当前选项
+        self.text = text  # 存储当前文本
+        self.choice = choices  # 存储当前选项
 
     def input(self):
         """ 获取用户点击的按钮索引 """
