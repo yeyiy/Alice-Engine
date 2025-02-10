@@ -57,9 +57,3 @@ python代码用一对“@”括起来，下面为调用示例：
 ![d2ViXzMwMDFfNzU4MTg5OV8wXzE3Mzg3Nzg4NTYyNTBfNDNlNjBjYzg](https://github.com/user-attachments/assets/a84f1a88-648a-453a-8b80-2fad4ac434df)
 点击“选项一”后，会显示：
 ![d2ViXzMwMDFfNzU4MTg5OV8wXzE3Mzg3Nzg4OTMwMzJfNjEzOTA2YjU](https://github.com/user-attachments/assets/c1cc9519-00e8-4e44-acb0-48ae9c8d4fe5)
-
-## 未来开发计划
-
-未来的更新方向可能包括：
-1.使游戏文本的大小、字体和颜色可以被开发者调整。
-2.引入定义和使用变量、条件判断等操作。
