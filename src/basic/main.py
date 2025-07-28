@@ -1,5 +1,5 @@
-import mainloop
-import script_parse
+import mainloop as mainloop
+import script_parse as script_parse
 
 if __name__ == "__main__":
     file = "example/example-script.as"  # 脚本文件名
