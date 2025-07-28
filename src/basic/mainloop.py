@@ -1,7 +1,7 @@
 import tkinter as tk
 from typing import List, Optional, Tuple
-import script_parse as script_parse
 from queue import Queue
+from . import script_parse
 
 
 class GUI:
@@ -28,7 +28,6 @@ class GUI:
         self.update_queue: Queue[Tuple[str, List[str]]] = Queue()
         self.choice_index: Optional[int] = None  # 用于存储用户选择的按钮索引
         self.buttons: List[tk.Button] = []
-
         self.check_updates()
 
     def check_updates(self) -> None:
@@ -65,7 +64,7 @@ class GUI:
         """ 处理按钮点击事件 """
         self.choice_index = index
 
-    def update_interface(self, text: str, choices: List[str]) -> None:
+    def update_interface(self, text: str, choices: List[Optional[str]]) -> None:
         """ 外部调用接口 """
         self.update_queue.put((text, choices))
 

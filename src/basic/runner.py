@@ -1,6 +1,6 @@
 import sys
 import ast
-import api
+from . import api
 from types import ModuleType, FunctionType
 from typing import Dict, Any, Optional
 

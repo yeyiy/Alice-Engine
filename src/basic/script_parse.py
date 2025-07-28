@@ -1,4 +1,4 @@
-import runner
+from . import runner
 from typing import List, Tuple, Optional, Dict
 
 

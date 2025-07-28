@@ -1,4 +1,4 @@
-import mainloop
+from . import mainloop
 from typing import Any
 
 
